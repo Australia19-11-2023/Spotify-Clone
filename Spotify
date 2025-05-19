@@ -1,0 +1,84 @@
+# **index.html**
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Best of NCS</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="player-container">
+<h2>Best of NCS - No Copyright Sounds</h2>
+<ul class="playlist">
+<li onclick="playSong('assets/on_on.mp3')">On & On - Cartoon, Daniel Levi</li>
+<li onclick="playSong('assets/invincible.mp3')">Invincible - DEAF KEV</li>
+<li onclick="playSong('assets/mortals.mp3')">Mortals - Warriyo, Laura Brehm</li>
+<li onclick="playSong('assets/shine.mp3')">Shine - Spektrem</li>
+<li onclick="playSong('assets/why_we_lose.mp3')">Why We Lose - Cartoon, Coleman Trapp</li>
+<li onclick="playSong('assets/sky_high.mp3')">Sky High - Elektronomia</li>
+<li onclick="playSong('assets/symbolism.mp3')">Symbolism - Electro-Light</li>
+<li onclick="playSong('assets/heroes_tonight.mp3')">Heroes Tonight - Janji, Johnning</li>
+<li onclick="playSong('assets/my_heart.mp3')">My Heart - Different Heaven, EH!DE</li>
+<li onclick="playSong('assets/feel_good.mp3')">Feel Good - Syn Cole</li>
+</ul>
+<audio id="audioPlayer" controls autoplay></audio>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+# **styles.css**
+
+body {
+background-color: #fce9d7;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+.player-container {
+max-width: 600px;
+margin: 50px auto;
+background: #000;
+padding: 20px;
+border-radius: 10px;
+color: #fff;
+}
+
+h2 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.playlist {
+list-style-type: none;
+padding: 0;
+}
+
+.playlist li {
+padding: 10px 15px;
+margin: 5px 0;
+background-color: #222;
+border-radius: 5px;
+cursor: pointer;
+transition: background 0.3s;
+}
+
+.playlist li:hover {
+background-color: #444;
+}
+
+audio {
+width: 100%;
+margin-top: 20px;
+}
+
+# **script.js**
+
+function playSong(src) {
+const audioPlayer = document.getElementById('audioPlayer');
+audioPlayer.src = src;
+audioPlayer.play();
+}
